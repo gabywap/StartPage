@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+
+<!--
+GetStarted - A simple responsive Startpage
+Author: MrAlpha786  (github.con/MrAlpha786) 
+Fork: gosat.hu  (github.com/gabywap)
+-->
+
+<title>gosat.hu Kezdőlap</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div class="container">
+<div>.::. Helyi Időjárás .::.</div>
+<div id="weather" style="margin-top: 10px;">Időjárás betöltése...</div>
+
+	<h1><span id="username" onclick="toggleMode()">gosat.hu Kezdőlap</span></h1>
+	<h2><a href="https://gosat.hu">Főoldal ::: gosat.hu</a></h2>
+	 <h2><label for="fname">Kereső választó:</label>
+	<select id="searchEngineSelect">
+  <option value="Google">Google</option>
+  <option value="DuckDuckGo">DuckDuckGo</option>
+  <option value="Bing">Bing</option>
+  <option value="Yahoo">Yahoo</option>
+</select>  </h2>
+<div id="rss-feed-index">
+  <h3>📢 Vezető hírek</h3>
+  <ul id="rss-list-index"></ul>
+</div>
+<!--
+//<div id="rss-feed-sport">
+  <h3>⚽ Sport hírek</h3>
+  <ul id="rss-list-sport"></ul>
+</div>
+-->
+	<div id="search">
+		<input id="search-field" type="text"/>
+		<button id="clear-field" onclick="clearField()"><img src="asset/icons/close.svg" alt="clear"></button>
+		<button id="search-button" onclick="search()"><img src="asset/icons/loupe.svg" alt="Go"></button>
+	</div>
+	<div id="table-container" class="table-container">
+		<div class="col-container" id="tab-container">
+
+		</div>
+		<div class="col-container" id="content-container">
+
+		</div>
+	</div>
+</div>
+
+<script src="config.js"></script>
+<script src="main.js"></script>
+
+</body>
+</html>
