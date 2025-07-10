@@ -1,3 +1,4 @@
+
 # 📌 StartPage – Egy egyszerű, reszponzív kezdőlap
 
 ![Képernyőkép](asset/getstarted.gif)
@@ -79,3 +80,4 @@ Ha kérdésed van vagy segítség kell, nyugodtan keress!
 ---
 
 Köszönöm, hogy használod ezt a kezdőlapot! 😊
+
