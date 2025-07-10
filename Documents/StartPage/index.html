@@ -13,6 +13,18 @@ Fork: gosat.hu  (github.com/gabywap)
 
 <title>gosat.hu Kezdőlap</title>
 <link rel="stylesheet" href="styles.css" />
+<script>
+  function playRadio() {
+    const url = document.getElementById('radioStream').value;
+    const player = document.getElementById('audioPlayer');
+    player.src = url;
+    player.style.display = 'inline';
+    player.play().catch(err => {
+      alert("A lejátszás sikertelen. Ellenőrizd a stream URL-t.");
+      console.error(err);
+    });
+  }
+</script>
 </head>
 <body>
 <div class="container">
@@ -21,6 +33,24 @@ Fork: gosat.hu  (github.com/gabywap)
 
 	<h1><span id="username" onclick="toggleMode()">gosat.hu Kezdőlap</span></h1>
 	<h2><a href="https://gosat.hu">Főoldal ::: gosat.hu</a></h2>
+	<!-- Online rádiólejátszó -->
+    <div style="margin: 10px 0; text-align: center;">
+  <label for="radioStream">🎵 Online rádió stream:</label><br>
+  <input id="radioStream" type="text"
+  value="http://dombradio.mooo.com:8000/live.mp3"
+  style="width: 80%; max-width: 400px; padding: 5px; margin-top: 5px;
+         background-color: #222; color: #fff; border: 1px solid #555;
+         border-radius: 4px;" />
+  <br><br>
+<button onclick="playRadio()" style="padding: 6px 16px; background-color: #444; color: #fff; border: none; border-radius: 5px; cursor: pointer;">
+  ▶️ Lejátszás
+</button>  <br><br>
+<div style="background-color: #333; padding: 10px; border-radius: 10px; display: inline-block;">
+  <audio id="audioPlayer" controls style="width: 300px; display: none;"></audio>
+</div>  </div>
+  <br><br>
+	
+	
 	 <h2><label for="fname">Kereső választó:</label>
 	<select id="searchEngineSelect">
   <option value="Google">Google</option>

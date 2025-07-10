@@ -1,31 +1,76 @@
-# StartPage – Egy egyszerű, reszponzív kezdőlap
+# 📌 StartPage – Egy egyszerű, reszponzív kezdőlap
 
-![Gif](asset/getstarted.gif)
+![Képernyőkép](asset/getstarted.gif)
 
-Ez a StartPage egy egyszerű és letisztult kezdőlap, amit bármilyen eszközön használhatsz: telefonon, tableten vagy asztali gépen.
-
-Támogatja a világos és sötét módot, valamint testreszabhatóak a weboldal linkek.
-
-## Testreszabás
-
-A testreszabásokat a `config.js` fájlban találod, itt módosíthatod a keresőmotort, a könyvjelzőket és a megjelenést.
+Ez a projekt egy testreszabható, reszponzív kezdőlap (StartPage), amelyet bármilyen eszközön (PC, tablet, mobil) kényelmesen lehet használni.  
+Sötét és világos módot is támogat, tartalmaz keresőválasztót, rádiólejátszót, időjárást, RSS-t, és kedvenc linkjeid lapfülekben jelennek meg.
 
 ---
 
-## Használat
+## 🌐 Élő demó
 
-- A keresősávban kereshetsz a kiválasztott keresőmotorral.
-- A lap tetején lévő füleken választhatsz a kategóriák között.
-- Kattints a linkekre, amelyek új böngészőfülön nyílnak meg.
+👉 [🔗 Nyisd meg a weboldalt](https://gabywap.github.io/StartPage/) (GitHub Pages-en fut)
 
 ---
 
-## Funkciók
+## ⚙️ Testreszabás
 
-- Reszponzív design minden eszközre
-- Világos és sötét mód váltás
-- Több kategóriás könyvjelzők
-- Egyéni keresőmotor választó
+A tartalom a `config.js` fájlban testreszabható:
+
+- Saját linkek hozzáadása
+- Saját rádió stream beállítása
+- Alapértelmezett kereső kiválasztása
+- Lapfülek címei és tartalma
+
+---
+
+## 💡 Funkciók
+
+- ✅ Keresőválasztó (Google, DuckDuckGo, Bing stb.)
+- ✅ Online rádió stream lejátszó
+- ✅ Időjárás megjelenítése
+- ✅ RSS hírolvasó támogatás
+- ✅ Lapfüles linkkatalógus
+- ✅ Sötét/világos mód váltás
+- ✅ Mobilbarát, letisztult dizájn
+
+---
+
+## 🛠 Használat
+
+1. Nyisd meg a `index.html` fájlt böngészőben  
+2. Testreszabáshoz szerkeszd a `config.js` fájlt
+3. Szükség esetén módosítsd a `styles.css` vagy `main.js` fájlokat is
+
+---
+
+## 🚀 Telepítés GitHub Pages-re
+
+1. Forkold vagy klónozd a repót
+2. Menj a GitHub-on a **Settings > Pages** menüpontra
+3. Válaszd ki a `main` ágat és a gyökér (`/`) mappát
+4. A weboldalod elérhető lesz:  
+   `https://felhasznalonev.github.io/repo-nev/`
+
+---
+
+## 🧊 Licenc
+
+Ez a projekt a [MIT licenc](LICENSE) alatt érhető el.
+
+---
+
+## 🙌 Köszönet
+
+Eredeti ötlet alapján: [MrAlpha786/getstarted](https://github.com/MrAlpha786/getstarted)  
+Forkolt alap: [SolutionMasterIT/website-StartPage](https://github.com/SolutionMasterIT/website-StartPage)  
+Saját verzió: gabywap
+
+---
+
+## ☕ Támogatás
+
+Ha tetszett, nyugodtan ⭐-ozd a projektet vagy forkolj saját célra. Ötleteket, hibákat szívesen fogadok!
 
 ---
 

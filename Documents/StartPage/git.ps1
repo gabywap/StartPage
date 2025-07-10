@@ -1,5 +1,5 @@
-###ha nem m¸kˆdne akkor elsınek futtatni ::: Set-ExecutionPolicy RemoteSigned
-### aktu·lis felhaszn·lÛ esetÈben ::: Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+###ha nem m√ºk√∂dne akkor els≈ënek futtatni ::: Set-ExecutionPolicy RemoteSigned
+### aktu√°lis felhaszn√°l√≥ eset√©ben ::: Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
 
 #[Console]::OutputEncoding
 
@@ -15,7 +15,7 @@ $Button                                    = [System.Windows.MessageBoxButton]::
 $ErrorIco                                  = [System.Windows.MessageBoxImage]::Error
 
 $Form                                      = New-Object system.Windows.Forms.Form
-$Form.ClientSize                           = New-Object System.Drawing.Point(350,200) #magass·g,szÈlessÈg
+$Form.ClientSize                           = New-Object System.Drawing.Point(350,200) #magass√°g,sz√©less√©g
 $Form.text                                 = "GIT: getstarted"
 $Form.StartPosition                        = "CenterScreen"
 $Form.TopMost                              = $false
@@ -42,7 +42,7 @@ $Panel_default.height                      = 350
 $Panel_default.width                       = $d_left-$margin_left
 $Panel_default.location                    = New-Object System.Drawing.Point(($x_left+$margin_left),($y_top+$margin_top))
 
-$Form.controls.AddRange(@($Panel_default)) ###vesszıvel v·lasztjuk el ha tˆbb panel van
+$Form.controls.AddRange(@($Panel_default)) ###vessz≈ëvel v√°lasztjuk el ha t√∂bb panel van
 
 #Panelek tartalma
 $x_left         = 0
@@ -77,27 +77,27 @@ $gitHub_commit.location                         = New-Object System.Drawing.Poin
 $gitHub_commit.Font                             = New-Object System.Drawing.Font('Microsoft Sans Serif',9)
 $y_top          = $y_top + $d_top
 
-$Panel_default.controls.AddRange(@($gitHub_init,$git_clone,$gitHub_commit)) ###vesszıvel v·lasztjuk el ha tˆbb elem van
+$Panel_default.controls.AddRange(@($gitHub_init,$git_clone,$gitHub_commit)) ###vessz≈ëvel v√°lasztjuk el ha t√∂bb elem van
 
 #eventek
 $gitHub_init.Add_Click({
 	Write-Host "Start::: gitHub_init!"
 	$CMD       = 'git'
-	& $CMD config --global user.name "Nyilas J·nos"
+	& $CMD config --global user.name "Nyilas J√°nos"
 	& $CMD config --global user.email "janos.fejleszto@gmail.com"
 	& $CMD init
 	& $CMD remote add origin $REPO_git
 	& $CMD add .
 	& $CMD commit -m "0.0.0"
 	& $CMD push -u origin main
-	Write-Host "K…SZ!"
+	Write-Host "K√âSZ!"
 })
 
 $git_clone.Add_Click({
 	Write-Host "Start::: git_clone!"
 	$CMD       = 'git'
 	& $CMD -c http.sslVerify=false clone $REPO
-	Write-Host "K…SZ!"
+	Write-Host "K√âSZ!"
 })
 
 $gitHub_commit.Add_Click({
@@ -110,7 +110,7 @@ $gitHub_commit.Add_Click({
 	& git add .
 	& git commit -m $commit
 	& git push -u origin main
-	Write-Host "K…SZ!"
+	Write-Host "K√âSZ!"
 })
 
 [void]$Form.ShowDialog()
