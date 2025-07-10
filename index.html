@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+
+<!--
+GetStarted - A simple responsive Startpage
+Author: MrAlpha786  (github.con/MrAlpha786) 
+Fork: gosat.hu  (github.com/gabywap)
+-->
+
+<title>gosat.hu Kezdőlap</title>
+<link rel="stylesheet" href="styles.css" />
+<script>
+  function playRadio() {
+    const url = document.getElementById('radioStream').value;
+    const player = document.getElementById('audioPlayer');
+    player.src = url;
+    player.style.display = 'inline';
+    player.play().catch(err => {
+      alert("A lejátszás sikertelen. Ellenőrizd a stream URL-t.");
+      console.error(err);
+    });
+  }
+</script>
+</head>
+<body>
+<div class="container">
+<div>.::. Helyi Időjárás .::.</div>
+<div id="weather" style="margin-top: 10px;">Időjárás betöltése...</div>
+
+	<h1><span id="username" onclick="toggleMode()">gosat.hu Kezdőlap</span></h1>
+	<h2><a href="https://gosat.hu">Főoldal ::: gosat.hu</a></h2>
+	<!-- Online rádiólejátszó -->
+    <div style="margin: 10px 0; text-align: center;">
+  <label for="radioStream">🎵 Online rádió stream:</label><br>
+  <input id="radioStream" type="text"
+  value="http://dombradio.mooo.com:8000/live.mp3"
+  style="width: 80%; max-width: 400px; padding: 5px; margin-top: 5px;
+         background-color: #222; color: #fff; border: 1px solid #555;
+         border-radius: 4px;" />
+  <br><br>
+<button onclick="playRadio()" style="padding: 6px 16px; background-color: #444; color: #fff; border: none; border-radius: 5px; cursor: pointer;">
+  ▶️ Lejátszás
+</button>  <br><br>
+<div style="background-color: #333; padding: 10px; border-radius: 10px; display: inline-block;">
+  <audio id="audioPlayer" controls style="width: 300px; display: none;"></audio>
+</div>  </div>
+  <br><br>
+	
+	
+	 <h2><label for="fname">Kereső választó:</label>
+	<select id="searchEngineSelect">
+  <option value="Google">Google</option>
+  <option value="DuckDuckGo">DuckDuckGo</option>
+  <option value="Bing">Bing</option>
+  <option value="Yahoo">Yahoo</option>
+</select>  </h2>
+<div id="rss-feed-index">
+  <h3>📢 Vezető hírek</h3>
+  <ul id="rss-list-index"></ul>
+</div>
+<!--
+//<div id="rss-feed-sport">
+  <h3>⚽ Sport hírek</h3>
+  <ul id="rss-list-sport"></ul>
+</div>
+-->
+	<div id="search">
+		<input id="search-field" type="text"/>
+		<button id="clear-field" onclick="clearField()"><img src="asset/icons/close.svg" alt="clear"></button>
+		<button id="search-button" onclick="search()"><img src="asset/icons/loupe.svg" alt="Go"></button>
+	</div>
+	<div id="table-container" class="table-container">
+		<div class="col-container" id="tab-container">
+
+		</div>
+		<div class="col-container" id="content-container">
+
+		</div>
+	</div>
+</div>
+
+<script src="config.js"></script>
+<script src="main.js"></script>
+
+</body>
+</html>
